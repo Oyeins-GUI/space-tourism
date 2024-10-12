@@ -25,6 +25,11 @@ export default {
                "url('/assets/technology/background-technology-tablet.jpg')",
             "technology-mobile":
                "url('/assets/technology/background-technology-mobile.jpg')",
+
+            // "destination-moon": "url('/assets/destination/image-moon.jpg')",
+            // "destination-mars": "url('/assets/destination/image-mars.jpg')",
+            // "destination-titan": "url('/assets/destination/image-titan.jpg')",
+            // "destination-europa": "url('/assets/destination/image-europa.jpg')",
          },
          colors: {
             white: "#FFFFFF",

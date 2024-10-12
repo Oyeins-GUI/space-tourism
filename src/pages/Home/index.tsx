@@ -2,7 +2,10 @@ import RootLayout from "../../RootLayout";
 
 export default function Home() {
    return (
-      <RootLayout className="bg-home-mobile md:bg-home-tablet xl:bg-home-desktop bg-cover">
+      <RootLayout
+         className="bg-home-mobile md:bg-home-tablet xl:bg-home-desktop bg-cover"
+         style="flex items-start xl:items-center justify-center"
+      >
          <HeroSection />
       </RootLayout>
    );
