@@ -575,6 +575,10 @@ video {
   margin-right: -32px;
 }
 
+.mb-100 {
+  margin-bottom: 8px;
+}
+
 .mb-600 {
   margin-bottom: 48px;
 }
@@ -585,6 +589,18 @@ video {
 
 .mt-600 {
   margin-top: 48px;
+}
+
+.mb-300 {
+  margin-bottom: 24px;
+}
+
+.mb-500 {
+  margin-bottom: 40px;
+}
+
+.mt-100 {
+  margin-top: 8px;
 }
 
 .block {
@@ -631,10 +647,6 @@ video {
   width: 254px;
 }
 
-.w-\[539px\] {
-  width: 539px;
-}
-
 .w-full {
   width: 100%;
 }
@@ -649,10 +661,6 @@ video {
 
 .max-w-\[327px\] {
   max-width: 327px;
-}
-
-.max-w-\[539px\] {
-  max-width: 539px;
 }
 
 .max-w-\[570px\] {
@@ -745,10 +753,6 @@ video {
 
 .gap-800 {
   gap: 64px;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .rounded-full {
@@ -848,26 +852,6 @@ video {
   padding-left: 48px;
 }
 
-.pb-7 {
-  padding-bottom: 1.75rem;
-}
-
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pb-25 {
-  padding-bottom: 2px;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -935,16 +919,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-opacity-20 {
-  --tw-text-opacity: 0.2;
-}
-
 .text-opacity-25 {
   --tw-text-opacity: 0.25;
-}
-
-.text-opacity-5 {
-  --tw-text-opacity: 0.05;
 }
 
 .text-opacity-50 {
@@ -971,16 +947,12 @@ video {
     margin-top: 128px;
   }
 
-  .md\:mt-500 {
-    margin-top: 40px;
-  }
-
-  .md\:mt-300 {
-    margin-top: 24px;
-  }
-
   .md\:mt-400 {
     margin-top: 32px;
+  }
+
+  .md\:mt-500 {
+    margin-top: 40px;
   }
 
   .md\:flex {
@@ -1011,12 +983,12 @@ video {
     justify-content: space-between;
   }
 
-  .md\:gap-400 {
-    gap: 32px;
-  }
-
   .md\:gap-300 {
     gap: 24px;
+  }
+
+  .md\:gap-400 {
+    gap: 32px;
   }
 
   .md\:bg-crew-tablet {
@@ -1064,16 +1036,16 @@ video {
     font-size: 2.5rem;
   }
 
+  .md\:text-tablet-preset-4 {
+    font-size: 1.5rem;
+  }
+
   .md\:text-tablet-preset-5 {
     font-size: 1.25rem;
   }
 
   .md\:text-tablet-preset-9 {
     font-size: 1rem;
-  }
-
-  .md\:text-tablet-preset-4 {
-    font-size: 1.5rem;
   }
 }
 
@@ -1088,6 +1060,10 @@ video {
 
   .xl\:mt-600 {
     margin-top: 48px;
+  }
+
+  .xl\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .xl\:block {
@@ -1130,16 +1106,16 @@ video {
     justify-content: normal;
   }
 
+  .xl\:gap-0 {
+    gap: 0px;
+  }
+
   .xl\:gap-500 {
     gap: 40px;
   }
 
   .xl\:gap-600 {
     gap: 48px;
-  }
-
-  .xl\:gap-0 {
-    gap: 0px;
   }
 
   .xl\:bg-crew-desktop {
@@ -1154,16 +1130,12 @@ video {
     background-image: url('/assets/home/background-home-desktop.jpg');
   }
 
-  .xl\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .xl\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
   .xl\:pb-24 {
     padding-bottom: 6rem;
+  }
+
+  .xl\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .xl\:text-left {
@@ -1178,15 +1150,15 @@ video {
     font-size: 3.5rem;
   }
 
+  .xl\:text-desktop-preset-4 {
+    font-size: 2rem;
+  }
+
   .xl\:text-desktop-preset-5-6 {
     font-size: 1.75rem;
   }
 
   .xl\:text-desktop-preset-9 {
     font-size: 1.125rem;
-  }
-
-  .xl\:text-desktop-preset-4 {
-    font-size: 2rem;
   }
 }

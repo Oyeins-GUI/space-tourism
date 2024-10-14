@@ -19,7 +19,7 @@ function HeroSection() {
 
    return (
       <div className="flex flex-col xl:flex-row md:gap-300 xl:gap-600 text-white">
-         <div className="flex items-center justify-center xl:items-start xl:ustify-between flex-col gap-200 xl:gap-0">
+         <div className="flex items-center justify-between xl:items-start xl:ustify-between flex-col gap-200 xl:gap-0">
             <h3 className="text-white text-center md:text-left text-mobile-preset-6 md:text-tablet-preset-5 xl:text-desktop-preset-5-6">
                <span className="font-bold text-white text-opacity-25">02</span>{" "}
                MEET YOUR CREW
@@ -50,7 +50,7 @@ function HeroSection() {
 
 function Tabs({ setCount }: { setCount: (newCount: number) => void }) {
    return (
-      <div className="flex items-center xl:justify-normal justify-center gap-400 text-blue-300 font-semibold xl:pb-24">
+      <div className="flex items-center xl:justify-normal justify-center gap-400 text-blue-300 font-semibold mt-100 mb-500 xl:mb-0 xl:pb-24">
          <TabButton setCount={setCount} newCount={0} />
          <TabButton setCount={setCount} newCount={1} />
          <TabButton setCount={setCount} newCount={2} />
