@@ -1,6 +1,6 @@
 import { useState } from "react";
 import RootLayout from "../../RootLayout";
-import destinationData from "../../data.json";
+import data from "../../data.json";
 
 export default function Destination() {
    return (
@@ -15,7 +15,7 @@ export default function Destination() {
 
 function HeroSection() {
    const [count, setCount] = useState(0);
-   const destination = destinationData.destinations;
+   const destination = data.destinations[count];
 
    return (
       <div>
@@ -25,7 +25,7 @@ function HeroSection() {
          </h3>
          <div className="flex flex-col xl:flex-row items-center justify-center gap-400 text-center xl:text-left mt-300 md:mt-500 xl:mt-600">
             <img
-               src={destination[count].images.png}
+               src={destination.images.png}
                alt="destination_image"
                className="w-[150px] md:w-[300px] xl:w-[480px] px-300"
             />
@@ -33,10 +33,10 @@ function HeroSection() {
                <Tabs setCount={setCount} />
                <div className="flex flex-col gap-200">
                   <h1 className="text-mobile-preset-2 md:text-tablet-preset-2 xl:text-desktop-preset-2 uppercase font-bold">
-                     {destination[count].name}
+                     {destination.name}
                   </h1>
                   <p className="max-w-[327px] md:max-w-[512px] xl:max-w-[445px]">
-                     {destination[count].description}
+                     {destination.description}
                   </p>
                   <hr className="border-blue-300" />
                   <div className="flex flex-col md:flex-row items-center md:justify-between xl:justify-normal gap-300 uppercase">
@@ -45,7 +45,7 @@ function HeroSection() {
                            AVG. DISTANCE
                         </h4>
                         <p className="text-desktop-preset-5-6">
-                           {destination[count].distance}
+                           {destination.distance}
                         </p>
                      </div>
                      <div>
@@ -53,7 +53,7 @@ function HeroSection() {
                            EST. TRAVEL TIME
                         </h4>
                         <p className="text-desktop-preset-5-6">
-                           {destination[count].travel}
+                           {destination.travel}
                         </p>
                      </div>
                   </div>

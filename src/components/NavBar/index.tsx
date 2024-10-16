@@ -89,7 +89,7 @@ function NavMenu({
                onClick={() => setIsOpen(false)}
             />
          </div>
-         <ul className="bg-blue-900 bg-opacity-70 flex flex-col gap-400 flex-1">
+         <ul className="bg-blue-900 md:hidden flex flex-col gap-400 flex-1">
             <li className="flex items-center gap-150">
                <span className="font-extrabold">00</span>
                <Link to="/">HOME</Link>

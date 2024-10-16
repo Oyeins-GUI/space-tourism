@@ -16,7 +16,7 @@ export default function RootLayout({
       <div className={`${className} flex flex-col min-h-dvh`}>
          <NavBar />
          <main
-            className={`max-w-6xl mx-auto p-300 md:p-0 ${style} w-full flex-1`}
+            className={`max-w-6xl mx-auto p-300 md:p-300 ${style} w-full flex-1`}
          >
             {children}
          </main>
