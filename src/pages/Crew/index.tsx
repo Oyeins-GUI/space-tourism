@@ -35,7 +35,7 @@ function HeroSection() {
                   {crew.bio}
                </p>
             </div>
-            <Tabs setCount={setCount} />
+            <Tabs count={count} setCount={setCount} />
          </div>
          <div className="block w-max-[271px] md:w-max-[446px] xl:w-max-[539px] h-max-[271px] md:h-max-[446px] xl:h-max-[539px]">
             <img
@@ -48,29 +48,43 @@ function HeroSection() {
    );
 }
 
-function Tabs({ setCount }: { setCount: (newCount: number) => void }) {
-   return (
-      <div className="flex items-center xl:justify-normal justify-center gap-400 text-blue-300 font-semibold mt-100 mb-500 xl:mb-0 xl:pb-24">
-         <TabButton setCount={setCount} newCount={0} />
-         <TabButton setCount={setCount} newCount={1} />
-         <TabButton setCount={setCount} newCount={2} />
-         <TabButton setCount={setCount} newCount={3} />
-      </div>
-   );
-}
-
-function TabButton({
+function Tabs({
+   count,
    setCount,
-   newCount,
 }: {
-   newCount: number;
+   count: number;
    setCount: (newCount: number) => void;
 }) {
    return (
-      <button className="" onClick={() => setCount(newCount)}>
-         <div
-            className={`bg-white w-[10px] xl:w-[15px] aspect-square rounded-full`}
-         />
-      </button>
+      <div className="flex items-center xl:justify-normal justify-center gap-400 text-blue-300 font-semibold mt-100 mb-500 xl:mb-0 xl:pb-24">
+         <button onClick={() => setCount(0)}>
+            <div
+               className={`w-[10px] xl:w-[15px] aspect-square rounded-full ${
+                  count === 0 ? "bg-white" : "bg-blue-300"
+               }`}
+            />
+         </button>
+         <button onClick={() => setCount(1)}>
+            <div
+               className={`w-[10px] xl:w-[15px] aspect-square rounded-full ${
+                  count === 1 ? "bg-white" : "bg-blue-300"
+               }`}
+            />
+         </button>
+         <button onClick={() => setCount(2)}>
+            <div
+               className={`w-[10px] xl:w-[15px] aspect-square rounded-full ${
+                  count === 2 ? "bg-white" : "bg-blue-300"
+               }`}
+            />
+         </button>
+         <button onClick={() => setCount(3)}>
+            <div
+               className={`w-[10px] xl:w-[15px] aspect-square rounded-full ${
+                  count === 3 ? "bg-white" : "bg-blue-300"
+               }`}
+            />
+         </button>
+      </div>
    );
 }

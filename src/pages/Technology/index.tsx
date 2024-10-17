@@ -39,7 +39,7 @@ function HeroSection() {
             </div>
 
             <div className="flex items-center flex-col xl:flex-row gap-500 xl:gap-800">
-               <Tabs setCount={setCount} />
+               <Tabs count={count} setCount={setCount} />
                <div className="flex flex-col gap-200 items-center xl:items-start justify-center xl:justify-normal text-center xl:text-left">
                   <h4 className="text-blue-300 text-mobile-preset-4 md:text-tablet-preset-4 xl:text-desktop-preset-4">
                      THE TERMINOLOGY
@@ -70,29 +70,39 @@ function HeroSection() {
    );
 }
 
-function Tabs({ setCount }: { setCount: (newCount: number) => void }) {
-   return (
-      <div className="flex items-center justify-between xl:flex-col gap-200 xl:gap-400">
-         <TabButton setCount={setCount} newCount={0} />
-         <TabButton setCount={setCount} newCount={1} />
-         <TabButton setCount={setCount} newCount={2} />
-      </div>
-   );
-}
-
-function TabButton({
+function Tabs({
+   count,
    setCount,
-   newCount,
 }: {
-   newCount: number;
+   count: number;
    setCount: (newCount: number) => void;
 }) {
    return (
-      <button
-         className="bg-white text-black w-[40px] md:w-[56px] xl:w-[80px] aspect-square rounded-full border-blue-300 text-mobile-preset-4 md:text-tablet-preset-4 xl:text-desktop-preset-4"
-         onClick={() => setCount(newCount)}
-      >
-         {newCount + 1}
-      </button>
+      <div className="flex items-center justify-between xl:flex-col gap-200 xl:gap-400">
+         <button
+            className={`bg-white text-black w-[40px] md:w-[56px] xl:w-[80px] aspect-square rounded-full border-blue-300 text-mobile-preset-4 md:text-tablet-preset-4 xl:text-desktop-preset-4 ${
+               count === 0 ? "bg-transparent text-white border" : ""
+            }`}
+            onClick={() => setCount(0)}
+         >
+            1
+         </button>
+         <button
+            className={`bg-white text-black w-[40px] md:w-[56px] xl:w-[80px] aspect-square rounded-full border-blue-300 text-mobile-preset-4 md:text-tablet-preset-4 xl:text-desktop-preset-4 ${
+               count === 1 ? "bg-transparent text-white border" : ""
+            }`}
+            onClick={() => setCount(1)}
+         >
+            2
+         </button>
+         <button
+            className={`bg-white text-black w-[40px] md:w-[56px] xl:w-[80px] aspect-square rounded-full border-blue-300 text-mobile-preset-4 md:text-tablet-preset-4 xl:text-desktop-preset-4 ${
+               count === 2 ? "bg-transparent text-white border" : ""
+            }`}
+            onClick={() => setCount(2)}
+         >
+            3
+         </button>
+      </div>
    );
 }

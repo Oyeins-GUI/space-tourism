@@ -30,7 +30,7 @@ function HeroSection() {
                className="w-[150px] md:w-[300px] xl:w-[480px] px-300"
             />
             <div className="flex items-center xl:items-start flex-col gap-300 md:gap-400 xl:gap-500 text-white md:px-300">
-               <Tabs setCount={setCount} />
+               <Tabs count={count} setCount={setCount} />
                <div className="flex flex-col gap-200">
                   <h1 className="text-mobile-preset-2 md:text-tablet-preset-2 xl:text-desktop-preset-2 uppercase font-bold">
                      {destination.name}
@@ -64,13 +64,55 @@ function HeroSection() {
    );
 }
 
-function Tabs({ setCount }: { setCount: (newCount: number) => void }) {
+function Tabs({
+   count,
+   setCount,
+}: {
+   count: number;
+   setCount: (newCount: number) => void;
+}) {
    return (
       <div className="flex gap-400 text-blue-300 font-semibold">
-         <button onClick={() => setCount(0)}>MOON</button>
-         <button onClick={() => setCount(1)}>MARS</button>
-         <button onClick={() => setCount(2)}>EUROPA</button>
-         <button onClick={() => setCount(3)}>TITAN</button>
+         <button
+            className={
+               count === 0
+                  ? "destination active-destination"
+                  : "destination inactive-destination"
+            }
+            onClick={() => setCount(0)}
+         >
+            MOON
+         </button>
+         <button
+            className={
+               count === 1
+                  ? "destination active-destination"
+                  : "destination inactive-destination"
+            }
+            onClick={() => setCount(1)}
+         >
+            MARS
+         </button>
+         <button
+            className={
+               count === 2
+                  ? "destination active-destination"
+                  : "destination inactive-destination"
+            }
+            onClick={() => setCount(2)}
+         >
+            EUROPA
+         </button>
+         <button
+            className={
+               count === 3
+                  ? "destination active-destination"
+                  : "destination inactive-destination"
+            }
+            onClick={() => setCount(3)}
+         >
+            TITAN
+         </button>
       </div>
    );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // TODO: hover state
 
@@ -31,36 +31,36 @@ function NavLinks() {
       <div className="pl-600 bg-white bg-opacity-10">
          <ul className="items-center justify-between gap-600 px-600 py-5 hidden md:flex">
             <li>
-               <Link
+               <NavLink
                   to="/"
                   className="flex items-center justify-between gap-100"
                >
                   <span className="font-bold">00</span> HOME
-               </Link>
+               </NavLink>
             </li>
             <li>
-               <Link
+               <NavLink
                   to="/destination"
                   className="flex items-center justify-between gap-100"
                >
                   <span className="font-bold">01</span> DESTINATION
-               </Link>
+               </NavLink>
             </li>
             <li>
-               <Link
+               <NavLink
                   to="/crew"
                   className="flex items-center justify-between gap-100"
                >
                   <span className="font-bold">02</span> CREW
-               </Link>
+               </NavLink>
             </li>
             <li>
-               <Link
+               <NavLink
                   to="/technology"
                   className="flex items-center justify-between gap-100"
                >
                   <span className="font-bold">03</span> TECHNOLOGY
-               </Link>
+               </NavLink>
             </li>
          </ul>
       </div>
@@ -76,7 +76,7 @@ function NavMenu({
 }) {
    return (
       <div
-         className={`flex flex-col text-white absolute top-0 h-full right-0 w-[254px] pl-300 ${
+         className={`flex flex-col text-white bg-blue-900 z-50 absolute top-0 h-full right-0 w-[254px] pl-300 ${
             isOpen ? "animate-openmenu" : "animate-closemenu"
          }
                `}
@@ -92,19 +92,19 @@ function NavMenu({
          <ul className="bg-blue-900 md:hidden flex flex-col gap-400 flex-1">
             <li className="flex items-center gap-150">
                <span className="font-extrabold">00</span>
-               <Link to="/">HOME</Link>
+               <NavLink to="/">HOME</NavLink>
             </li>
             <li className="flex items-center gap-150">
                <span className="font-extrabold">01</span>
-               <Link to="/destination">DESTINATION</Link>
+               <NavLink to="/destination">DESTINATION</NavLink>
             </li>
             <li className="flex items-center gap-150">
                <span className="font-extrabold">02</span>
-               <Link to="/crew">CREW</Link>
+               <NavLink to="/crew">CREW</NavLink>
             </li>
             <li className="flex items-center gap-150">
                <span className="font-extrabold">03</span>
-               <Link to="/technology">TECHNOLOGY</Link>
+               <NavLink to="/technology">TECHNOLOGY</NavLink>
             </li>
          </ul>
       </div>
