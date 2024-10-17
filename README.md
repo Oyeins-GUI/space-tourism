@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 -  Solution URL: [Github](https://github.com/Oyeins-GUI/space-tourism)
--  Live Site URL: [Space tourism](https://space-tourism.vercel.app)
+-  Live Site URL: [Space tourism](space-tourism-with-oyeins.vercel.app)
 
 ## My process
 
@@ -44,7 +44,7 @@ Users should be able to:
 
 -  Semantic HTML5 markup
 -  [React](https://reactjs.org/) - JS library
--  [Typescript](https://typescript.com)
+-  [Typescript](https://typescriptlang.org)
 -  [React router dom](https://reactrouter.com/) - Lib for handling navigation
 -  [Tailwindcss](https://tailwindcss.com/) - CSS framework
 
@@ -54,7 +54,7 @@ This project re-enforceed what I've known in the past. One thing I learnt with t
 
 ### Useful resources
 
--  [Tailwind](https://www.example.com) - This helped me wit configuring tailwind for this project and using tailwind in general
+-  [Tailwind](https://tailwindcss.com/) - This helped me wit configuring tailwind for this project and using tailwind in general
 
 ## Author
 
